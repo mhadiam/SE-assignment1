@@ -118,10 +118,12 @@ html {
     section#about-us {
       padding-block: 2rem;
 
-
       ul {
+        inline-size: 66.7vw;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0;
         gap: 2rem;
 
         li {
@@ -216,6 +218,78 @@ html {
 
           @media screen and (prefers-color-scheme: light) {
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), var(--tone-1) 50%, var(--tone-1)), url("./assets/pattern-1.svg");
+          }
+        }
+      }
+    }
+
+    section#gallery {
+      margin-inline: auto;
+      inline-size: 66.7vw;
+      padding-block: 2rem;
+      display: grid;
+      grid-template: 1fr 1fr / repeat(6, 1fr);
+      gap: 2rem;
+
+      figure {
+        margin: 0;
+        block-size: calc((66.7vw - 4rem) / 3);
+        border-radius: 0.5rem;
+        overflow: hidden;
+        position: relative;
+        cursor: crosshair;
+
+        &:hover figcaption {
+          top: 0;
+          opacity: 1;
+        }
+
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          grid-column: span 3;
+        }
+
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          grid-column: span 2;
+        }
+
+        img {
+          inline-size: 100%;
+          block-size: 100%;
+          object-fit: cover;
+        }
+
+        figcaption {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background-color: rgba(0, 0, 0, 0.2);
+          backdrop-filter: blur(16px);
+          top: 50px;
+          opacity: 0;
+          transition: all 200ms ease;
+
+          h3 {
+            font-size: x-large;
+            margin-block: 0;
+          }
+
+          span::before {
+            font-size: small;
+            position: relative;
+            left: 4px;
+            top: 2px;
+          }
+
+          h3,
+          span {
+            color: var(--tone-0);
           }
         }
       }
