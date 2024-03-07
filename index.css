@@ -1,0 +1,71 @@
+html {
+  direction: rtl;
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-weight: 400;
+  background-color: var(--tone-0);
+
+  @media screen and (prefers-color-scheme: dark) {
+    background-color: var(--tone-9);
+  }
+
+  body {
+    margin: 0;
+    box-sizing: border-box;
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      padding-block: 0.5rem;
+      font-size: large;
+      background-color: var(--tone-1);
+      border-block-end: 1px solid var(--tone-2);
+      backdrop-filter: blur(4px);
+      position: sticky;
+      top: 0;
+
+      @media screen and (prefers-color-scheme: dark) {
+        background-color: var(--tone-8);
+        border-block-end: 1px solid var(--tone-7);
+      }
+
+      a {
+        padding-inline: 1rem 2rem;
+        border-radius: 0.25rem;
+        position: relative;
+        background-color: transparent;
+        transition: all 200ms ease;
+
+        &:hover {
+          background-color: var(--tone-2);
+
+          @media screen and (prefers-color-scheme: dark) {
+            background-color: var(--tone-7);
+          }
+
+          i {
+            scale: 0.85;
+            rotate: 0deg;
+            opacity: 1;
+          }
+        }
+
+        i {
+          color: currentColor;
+        }
+
+        i {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0.5rem;
+          font-size: larger;
+          scale: 0.5;
+          rotate: 30deg;
+          opacity: 0;
+          transition: all 200ms ease;
+        }
+      }
+    }
+  }
+}
