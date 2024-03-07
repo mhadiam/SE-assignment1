@@ -1,1 +1,2 @@
-# آز مهندسی نرم‌افزار - مدیریت نسخ پروژه و یک‌پارچه‌سازی و استقرار مستمر
+# Software Engineering Lab
+## Project Version Control + CI/CD
