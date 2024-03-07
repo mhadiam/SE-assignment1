@@ -1,0 +1,32 @@
+html {
+  --tone-0: #FBF7F3;
+  --tone-1: #DFD9D3;
+  --tone-2: #B9B3AF;
+  --tone-3: #999491;
+  --tone-4: #7E7B78;
+  --tone-5: #696663;
+  --tone-6: #5F5D5A;
+  --tone-7: #474644;
+  --tone-8: #363533;
+  --tone-9: #252423;
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  em {
+    font-style: normal;
+  }
+
+  * {
+    color: var(--tone-7);
+
+    @media screen and (prefers-color-scheme: dark) {
+      color: var(--tone-2);
+    }
+  }
+}
