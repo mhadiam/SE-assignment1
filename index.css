@@ -294,5 +294,81 @@ html {
         }
       }
     }
+
+    section#newsletter {
+      background-color: var(--tone-1);
+
+      @media screen and (prefers-color-scheme: dark) {
+        background-color: var(--tone-8);
+      }
+
+      h2 {
+        margin-block: 0;
+        padding-block-start: 1rem;
+        text-align: center;
+        font-size: xx-large;
+      }
+
+      form {
+        margin-inline: auto;
+        inline-size: 66.7vw;
+        padding-block: 2rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+
+        input,
+        button {
+          font-size: larger;
+          font-family: inherit;
+        }
+
+        input {
+          background-color: transparent;
+          border: 1px solid var(--tone-2);
+          border-radius: 0.25rem;
+          padding: 0.25rem 1rem;
+          outline: none;
+          transition: all 200ms ease;
+
+          &[type="email"]:not(:focus) {
+            direction: rtl;
+          }
+
+          &:focus::placeholder {
+            color: transparent;
+          }
+
+          &:focus {
+            box-shadow: 0 0 0 2px var(--tone-2);
+          }
+
+          @media screen and (prefers-color-scheme: dark) {
+            border-color: var(--tone-6);
+
+            &:focus {
+              box-shadow: 0 0 0 2px var(--tone-6);
+            }
+          }
+        }
+
+        button {
+          flex-grow: 1;
+          cursor: pointer;
+          border: none;
+          border-radius: 0.25rem;
+          background-color: var(--tone-0);
+          transition: all 200ms ease;
+
+          &:hover {
+            transform: translateY(2px);
+          }
+
+          @media screen and (prefers-color-scheme: dark) {
+            background-color: var(--tone-9);
+          }
+        }
+      }
+    }
   }
 }
