@@ -370,5 +370,30 @@ html {
         }
       }
     }
+
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding-block: 2rem;
+      font-size: x-large;
+      border-block-start: 1px solid var(--tone-2);
+      background-image: url('./assets/pattern-4.svg');
+      background-size: 50px 50px;
+
+      @media screen and (prefers-color-scheme: dark) {
+        border-color: var(--tone-7);
+      }
+
+      a {
+        transition: all 200ms ease;
+
+        &:hover {
+          rotate: 10deg;
+          scale: 1.1;
+        }
+      }
+    }
   }
 }
